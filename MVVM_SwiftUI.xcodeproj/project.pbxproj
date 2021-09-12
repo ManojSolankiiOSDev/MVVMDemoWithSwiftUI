@@ -8,18 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		DD770C6626EDB47200CE9E91 /* MVVM_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD770C6526EDB47200CE9E91 /* MVVM_SwiftUIApp.swift */; };
-		DD770C6826EDB47200CE9E91 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD770C6726EDB47200CE9E91 /* ContentView.swift */; };
+		DD770C6826EDB47200CE9E91 /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD770C6726EDB47200CE9E91 /* HomePageView.swift */; };
 		DD770C6A26EDB47500CE9E91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD770C6926EDB47500CE9E91 /* Assets.xcassets */; };
 		DD770C6D26EDB47500CE9E91 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD770C6C26EDB47500CE9E91 /* Preview Assets.xcassets */; };
+		DD770C7B26EDB59E00CE9E91 /* HomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD770C7A26EDB59E00CE9E91 /* HomePageViewModel.swift */; };
+		DD770C7F26EDB5DC00CE9E91 /* APIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD770C7E26EDB5DC00CE9E91 /* APIModel.swift */; };
+		DD770C8426EDB61C00CE9E91 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD770C8326EDB61C00CE9E91 /* Constants.swift */; };
+		DD770C8926EDB85300CE9E91 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD770C8826EDB85300CE9E91 /* ServiceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DD770C6226EDB47200CE9E91 /* MVVM_SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVM_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD770C6526EDB47200CE9E91 /* MVVM_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_SwiftUIApp.swift; sourceTree = "<group>"; };
-		DD770C6726EDB47200CE9E91 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DD770C6726EDB47200CE9E91 /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 		DD770C6926EDB47500CE9E91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD770C6C26EDB47500CE9E91 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DD770C6E26EDB47500CE9E91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD770C7A26EDB59E00CE9E91 /* HomePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModel.swift; sourceTree = "<group>"; };
+		DD770C7E26EDB5DC00CE9E91 /* APIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIModel.swift; sourceTree = "<group>"; };
+		DD770C8326EDB61C00CE9E91 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DD770C8826EDB85300CE9E91 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,9 +60,11 @@
 		DD770C6426EDB47200CE9E91 /* MVVM_SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				DD770C6526EDB47200CE9E91 /* MVVM_SwiftUIApp.swift */,
-				DD770C6726EDB47200CE9E91 /* ContentView.swift */,
-				DD770C6926EDB47500CE9E91 /* Assets.xcassets */,
+				DD770C8726EDB83E00CE9E91 /* Network */,
+				DD770C8126EDB60300CE9E91 /* Utilities */,
+				DD770C7926EDB56000CE9E91 /* MainClass */,
+				DD770C7726EDB50F00CE9E91 /* Resources */,
+				DD770C7626EDB50600CE9E91 /* Modules */,
 				DD770C6E26EDB47500CE9E91 /* Info.plist */,
 				DD770C6B26EDB47500CE9E91 /* Preview Content */,
 			);
@@ -67,6 +77,48 @@
 				DD770C6C26EDB47500CE9E91 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DD770C7626EDB50600CE9E91 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				DD770C6726EDB47200CE9E91 /* HomePageView.swift */,
+				DD770C7A26EDB59E00CE9E91 /* HomePageViewModel.swift */,
+				DD770C7E26EDB5DC00CE9E91 /* APIModel.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		DD770C7726EDB50F00CE9E91 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DD770C6926EDB47500CE9E91 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DD770C7926EDB56000CE9E91 /* MainClass */ = {
+			isa = PBXGroup;
+			children = (
+				DD770C6526EDB47200CE9E91 /* MVVM_SwiftUIApp.swift */,
+			);
+			path = MainClass;
+			sourceTree = "<group>";
+		};
+		DD770C8126EDB60300CE9E91 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				DD770C8326EDB61C00CE9E91 /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		DD770C8726EDB83E00CE9E91 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DD770C8826EDB85300CE9E91 /* ServiceManager.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +190,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD770C6826EDB47200CE9E91 /* ContentView.swift in Sources */,
+				DD770C8426EDB61C00CE9E91 /* Constants.swift in Sources */,
+				DD770C7F26EDB5DC00CE9E91 /* APIModel.swift in Sources */,
+				DD770C6826EDB47200CE9E91 /* HomePageView.swift in Sources */,
 				DD770C6626EDB47200CE9E91 /* MVVM_SwiftUIApp.swift in Sources */,
+				DD770C7B26EDB59E00CE9E91 /* HomePageViewModel.swift in Sources */,
+				DD770C8926EDB85300CE9E91 /* ServiceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
